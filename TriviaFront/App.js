@@ -1,20 +1,49 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
+import HomeScreen from "./screens/HomeScreen";
+import QuestionScreen from "./screens/QuestionScreen";
+import { FontAwesome } from '@expo/vector-icons';
 
 export default function App() {
+  const Stack = createStackNavigator();
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen 
+          name="Acceuil" 
+          component={HomeScreen}
+          options={{
+            title: 'Acceuil',
+            headerStyle: {
+              backgroundColor: '#ba0d7b',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+          
+        />
+        <Stack.Screen 
+          name="Question" 
+          component={QuestionScreen}
+          options={{
+            title: 'Question',
+            headerStyle: {
+              backgroundColor: '#ba0d7b',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+            headerBackTitleVisible: false,
+            headerBackImage: () => (
+              <FontAwesome name="angle-left" size={24} color="#fff" style={{ marginLeft: 10 }} />
+            ),
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
