@@ -61,7 +61,7 @@ const Home = () => {
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
         <View style={style.container}>
           <View style={style.nbQuestion}>
-            <Text style={{marginTop: 25, fontSize: 20}} >Choisisez la difficulté :</Text>
+            <Text style={{marginTop: 25, fontSize: 20}} >Choisissez la difficulté :</Text>
             <Picker
               selectedValue={difficulty}
               style={{ height: 50, width: 200 }}
@@ -74,7 +74,7 @@ const Home = () => {
             </Picker>
           </View>
           <View style={style.category}>
-            <Text style={{fontSize: 20}}>Choisir la catégorie :</Text>
+            <Text style={{fontSize: 20}}>Choisissez la catégorie :</Text>
             <View style={{ flexDirection: 'row', flexWrap: 'wrap', marginTop: 20}}>
               {/* Mapping des catégories pour afficher les cartes */}
               {categories.map((cat, index) => (
