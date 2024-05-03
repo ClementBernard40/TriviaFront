@@ -11,7 +11,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen 
-          name="Acceuil" 
+          name="Accueil" 
           component={HomeScreen}
           options={{
             title: 'Acceuil',
