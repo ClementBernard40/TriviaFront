@@ -4,12 +4,12 @@ export default StyleSheet.create({
     color: "#bA807V",
     container: {
         flex: 1, // tres important
-        backgroundColor: '#CDCDCD',
-        justifyContent: "center"
+        justifyContent: "center",
+        marginHorizontal: 10
       },
     
       nbQuestion: {
-        marginTop: 20,
+        marginTop: 30,
         fontSize: 20,
         alignItems: 'center',
       },
@@ -27,7 +27,7 @@ export default StyleSheet.create({
       questionSuivant: {
         flex: 1,
         alignSelf: "center",
-        marginTop: 50, // Espacement supplémentaire si nécessaire
+        marginTop: 0, // Espacement supplémentaire si nécessaire
         width: 200,
         fontSize: 20,
         backgroundColor: 'white',
@@ -40,16 +40,34 @@ export default StyleSheet.create({
         paddingVertical: 12,
         paddingHorizontal: 24,
         borderRadius: 8,
+        
       },
+      categoryCard: {
+        backgroundColor: '#ADD8E6', // Bleu ciel
+        borderRadius: 8, // Bordure arrondie
+        padding: 10, // Ajout de padding
+        margin: 5, // Marge autour des cartes
+      },
+      categoryCardText: {
+        fontSize: 16,
+      },
+      selectedCategoryCard: {
+        backgroundColor: '#800000', // Bleu bordeau
+      },
+      selectedCategoryCardText: {
+        color: '#FFFFFF', // Texte blanc
+      },
+
       nextButtonText: {
         color: 'white',
         fontSize: 16,
+        textAlign: "center"
       },
 
       boutonContainer: {
         flex: 1,
         alignSelf: "center",
-        marginTop: 180, // Espacement supplémentaire si nécessaire
+        marginTop: 50, // Espacement supplémentaire si nécessaire
         width: 100,
         backgroundColor: 'white',
         borderRadius: 8, // Bord arrondi du bouton
@@ -71,7 +89,6 @@ export default StyleSheet.create({
       category: {
         marginTop: 200,
         fontSize: 15,
-        backgroundColor: '#CDCDCD',
         alignItems: 'center',
       },
 

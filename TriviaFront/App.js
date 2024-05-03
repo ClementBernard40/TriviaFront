@@ -14,8 +14,16 @@ export default function App() {
           name="Acceuil" 
           component={HomeScreen}
           options={{
-            headerShown: false,
+            title: 'Acceuil',
+            headerStyle: {
+              backgroundColor: '#ba0d7b',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
           }}
+          
         />
         <Stack.Screen 
           name="Question" 
